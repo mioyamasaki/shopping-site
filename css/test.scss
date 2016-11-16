@@ -17,6 +17,7 @@ $keycolor: #ff6d77;
 $linkcolor1:#887f69;
 $linkcolor2:#afa282;
 
+
 a{
     text-decoration:none;
     color:$linkcolor1;
@@ -457,7 +458,7 @@ main {
             h3{
                 background-color: $subcolor2;
                 width: 100%;
-                padding:20px 24px;
+                padding:0 24px 10px;
                 margin:0;
                 box-sizing: border-box;
                 color:#fff;
@@ -547,6 +548,7 @@ main {
                @include fontsize(16);
                letter-spacing:0.1em;
                font-weight:bold;
+               padding:15px 20px;
             }
         }
         #category{
@@ -590,14 +592,16 @@ main {
             }
         }
         
-        @media (min-width:550px){
+    @media (min-width:550px){
             
         #search,#link,#category,#about,#info{
             margin-bottom:20px;
             background-color: #fff;
             
             h3{
-                padding:20px;
+                padding:0 20px 10px;
+                margin:0;
+                box-sizing:border-box;
             }
         }
         #about,#info{
@@ -630,14 +634,15 @@ main {
             }
         }
         #search{
-            padding:20px;
+            padding:0 20px 20px;
             h3{
                 display:block;
                 background-color:#fff;
                 margin:0;
-                padding:0 0 15px 0;
+                padding:0;
                 img {
                     width: 87px;
+                    margin:0;
                     padding:0;
                 }
             }
@@ -671,6 +676,7 @@ main {
                @include fontsize(12);
                letter-spacing:0.1em;
                font-weight:bold;
+               padding-top:15px;
             }
         }
         #category{
@@ -927,8 +933,8 @@ main {
             }
         }//.spec_table
         
-        .info{
-                padding-top:40px;
+        .product_info{
+                /*padding-top:40px;*/
                 h3{
                   @include fontsize(16);
                   font-weight:bold;
@@ -1059,7 +1065,7 @@ main {
                 display: block;
             }
             
-            .info{
+            .product_info{
                     clear:both;
                 }
                 
