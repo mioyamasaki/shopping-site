@@ -1,6 +1,10 @@
 html {
   font-size: 62.5%; }
 
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0; }
+
 a {
   text-decoration: none;
   color: #887f69; }
@@ -48,265 +52,286 @@ body {
   /* Safari */
   flex-wrap: wrap; }
 
-/* header */
+/* ----------------- header ----------------- */
 header .container {
   padding-top: 30px; }
-  @media (max-width: 550px) {
-    header .container .logo {
-      text-align: center;
-      padding-top: 0; }
-    header .container .navi {
-      text-align: center; }
-      header .container .navi .sp_navi {
-        list-style: none; }
-        header .container .navi .sp_navi li {
-          display: inline-block;
-          padding: 0 12px; }
-          header .container .navi .sp_navi li button {
-            border: none;
-            margin: 0;
-            padding: 0;
-            width: 48px;
-            height: 48px; }
-      header .container .navi .pc_navi {
-        display: none; } }
-header #sp_navi_detail {
+  header .container .logo {
+    text-align: center;
+    margin-bottom: 20px; }
+  header .container .navi {
+    text-align: center;
+    margin-bottom: 15px; }
+    header .container .navi .sp_navi {
+      width: 60%;
+      list-style: none;
+      margin: 0 auto; }
+      header .container .navi .sp_navi li {
+        display: inline-block;
+        padding: 0 2%;
+        width: 15%;
+        height: auto; }
+        header .container .navi .sp_navi li button {
+          border: none;
+          margin: 0;
+          padding: 0; }
+    header .container .navi .pc_navi {
+      display: none; }
+
+#sp_navi_detail {
   display: none;
   background-color: #ff6d77;
   font-size: 15px;
   font-size: 1.5rem;
   padding: 1em; }
-  header #sp_navi_detail ul {
+  #sp_navi_detail ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-    header #sp_navi_detail ul li a {
+    #sp_navi_detail ul li a {
       display: block;
       color: #fff;
       padding: 1em 0;
       margin: 0;
       border-bottom: 1px solid #fff;
       text-decoration: none; }
-    header #sp_navi_detail ul li:last-child a {
+    #sp_navi_detail ul li:last-child a {
       border-bottom: none;
       padding: 1em 0 0; }
+
+/* ------- header PC ------- */
 @media (min-width: 550px) {
-  header .sp_navi {
-    display: none; }
-  header #sp_navi_detail {
-    display: none; }
-  header .logo {
+  header .container .logo {
     text-align: left;
     padding-top: 10px; }
-  header .navi {
+  header .container .navi {
     text-align: right;
     padding-top: 30px; }
-    header .navi .pc_navi {
-      list-style: none; }
-      header .navi .pc_navi li {
+    header .container .navi .pc_navi {
+      list-style: none;
+      display: block; }
+      header .container .navi .pc_navi li {
         display: inline-block;
         padding-left: 18px; }
-      header .navi .pc_navi li:first-child {
+      header .container .navi .pc_navi li:first-child {
         padding-left: 0; }
-      header .navi .pc_navi li:last-child {
-        padding-left: 5px; } }
-
-/* main */
-main .breadthumb {
+      header .container .navi .pc_navi li:last-child {
+        padding-left: 5px; }
+    header .container .navi .sp_navi, header .container .navi #sp_navi_detail {
+      display: none; } }
+/* ------- header PC ------- */
+/* ----------------- header ----------------- */
+/* --------------- breadthumb --------------- */
+.breadthumb {
   background-color: #e8e4da;
   font-size: 12px;
   font-size: 1.2rem; }
-  main .breadthumb ul {
+  .breadthumb ul {
     list-style: none;
     padding: 10px 6px 6px 15px; }
-    main .breadthumb ul li {
+    .breadthumb ul li {
       display: inline-block;
       padding-left: 5px;
       margin: 0;
       line-height: 1em; }
-    main .breadthumb ul li.home {
+    .breadthumb ul li.home {
       padding-left: 20px;
       background: url("../images/list/icon_home.png") no-repeat;
       background-size: 14px; }
-main .contents_area #new_item h2, main .contents_area #popular_item h2, main .contents_area #shopping_guide h2, main .contents_area #list_item h2, main .contents_area #recent_item h2 {
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px 0 30px; }
-main .contents_area #new_item .flexbox .item_inner, main .contents_area #popular_item .flexbox .item_inner, main .contents_area #shopping_guide .flexbox .item_inner, main .contents_area #list_item .flexbox .item_inner, main .contents_area #recent_item .flexbox .item_inner {
+
+/* --------------- breadthumb --------------- */
+/* --------------- contents_area --------------- */
+#new_item h2, #popular_item h2, #shopping_guide h2, #recent_item h2 {
+  width: 100%;
+  height: 30px;
+  margin: 40px 0 10px;
+  padding: 0; }
+
+#new_item h2 {
+  background: url("../images/top/title_newitems_sp.png") no-repeat top center;
+  background-size: 35% auto; }
+
+#popular_item h2 {
+  background: url("../images/top/title_popular_sp.png") no-repeat top center;
+  background-size: 50% auto; }
+
+#shopping_guide h2 {
+  background: url("../images/top/title_guide_sp.png") no-repeat top center;
+  background-size: 55% auto; }
+
+#recent_item h2 {
+  background: url("../images/top/title_recent_sp.png") no-repeat top center;
+  background-size: 32% auto; }
+
+#new_item .flexbox .item_inner, #popular_item .flexbox .item_inner, #shopping_guide .flexbox .item_inner, #recent_item .flexbox .item_inner {
   width: 49.6%;
   background-color: #fff;
-  padding: 3%;
+  padding: 10px;
   box-sizing: border-box;
-  margin-bottom: 0.8%; }
-  main .contents_area #new_item .flexbox .item_inner .post p, main .contents_area #popular_item .flexbox .item_inner .post p, main .contents_area #shopping_guide .flexbox .item_inner .post p, main .contents_area #list_item .flexbox .item_inner .post p, main .contents_area #recent_item .flexbox .item_inner .post p {
+  margin-bottom: 4px; }
+  #new_item .flexbox .item_inner .post p, #popular_item .flexbox .item_inner .post p, #shopping_guide .flexbox .item_inner .post p, #recent_item .flexbox .item_inner .post p {
     padding-top: 1.6rem;
     font-size: 12px;
     font-size: 1.2rem;
     margin: 0; }
-    main .contents_area #new_item .flexbox .item_inner .post p span, main .contents_area #popular_item .flexbox .item_inner .post p span, main .contents_area #shopping_guide .flexbox .item_inner .post p span, main .contents_area #list_item .flexbox .item_inner .post p span, main .contents_area #recent_item .flexbox .item_inner .post p span {
+    #new_item .flexbox .item_inner .post p span, #popular_item .flexbox .item_inner .post p span, #shopping_guide .flexbox .item_inner .post p span, #recent_item .flexbox .item_inner .post p span {
       display: block;
       padding: 1em 0 0; }
-main .contents_area #new_item h2 img {
-  width: 40%; }
-main .contents_area #popular_item h2 img {
-  width: 60%; }
-main .contents_area #list_item h2 {
-  margin-bottom: 10px;
-  padding: 0; }
-main .contents_area #recent_item h2 img {
-  width: 32%; }
-main .contents_area #shopping_guide h2 img {
-  width: 60%; }
-main .contents_area #shopping_guide .flexbox .guide_inner {
+
+#shopping_guide .flexbox .guide_inner {
   width: 100%;
   background-color: #fff;
-  padding: 6%;
+  padding: 25px;
   box-sizing: border-box;
   margin-bottom: 10px; }
-  main .contents_area #shopping_guide .flexbox .guide_inner h3 {
+  #shopping_guide .flexbox .guide_inner h3 {
     color: #887f69;
     font-size: 16px;
     font-size: 1.6rem;
     letter-spacing: 0.05em;
-    font-weight: bold; }
-  main .contents_area #shopping_guide .flexbox .guide_inner p {
-    width: 80%; }
-  main .contents_area #shopping_guide .flexbox .guide_inner dl {
+    font-weight: bold;
+    padding-bottom: 15px; }
+  #shopping_guide .flexbox .guide_inner p {
+    margin: 0;
+    padding-bottom: 10px; }
+  #shopping_guide .flexbox .guide_inner dl {
     list-style: none;
     margin: 0; }
-    main .contents_area #shopping_guide .flexbox .guide_inner dl dt {
+    #shopping_guide .flexbox .guide_inner dl dt {
       color: #887f69;
       font-size: 12px;
       font-size: 1.2rem;
       font-weight: bold;
       padding-bottom: 0.5em; }
-    main .contents_area #shopping_guide .flexbox .guide_inner dl dd {
+    #shopping_guide .flexbox .guide_inner dl dd {
       color: #000;
       font-size: 12px;
       font-size: 1.2rem;
       font-weight: normal;
       margin: 0;
       padding-bottom: 1em; }
-    main .contents_area #shopping_guide .flexbox .guide_inner dl dd:last-child {
-      padding-bottom: 0; }
-main .contents_area .pagenation {
-  margin-top: 20px; }
-  main .contents_area .pagenation .next, main .contents_area .pagenation .back {
-    width: 40%;
-    background-color: #887f69; }
-    main .contents_area .pagenation .next a, main .contents_area .pagenation .back a {
-      display: block;
-      padding: 20px 10px;
+    #shopping_guide .flexbox .guide_inner dl dd.credit {
       margin: 0;
-      text-align: center; }
-      main .contents_area .pagenation .next a img, main .contents_area .pagenation .back a img {
-        width: 40%; }
+      box-sizing: border-box; }
+      #shopping_guide .flexbox .guide_inner dl dd.credit img {
+        width: 19%; }
+    #shopping_guide .flexbox .guide_inner dl dd:last-child {
+      padding-bottom: 0; }
+
+/* ----- contents_area PC ----- */
 @media (min-width: 550px) {
-  main .contents_area #new_item h2, main .contents_area #popular_item h2, main .contents_area #shopping_guide h2, main .contents_area #recent_item h2 {
-    border-bottom: 1px solid #e2ddd4;
-    position: relative;
-    padding: 0;
-    margin: 60px 0 30px; }
-    main .contents_area #new_item h2 img, main .contents_area #popular_item h2 img, main .contents_area #shopping_guide h2 img, main .contents_area #recent_item h2 img {
-      background-color: #f9f8f6;
-      height: auto;
-      padding: 10px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto; }
-  main .contents_area #new_item .flexbox .item_inner, main .contents_area #popular_item .flexbox .item_inner, main .contents_area #shopping_guide .flexbox .item_inner, main .contents_area #list_item .flexbox .item_inner, main .contents_area #recent_item .flexbox .item_inner {
+  #new_item h2, #popular_item h2, #recent_item h2, #shopping_guide h2 {
+    width: 100%;
+    height: 30px;
+    margin: 30px 0 10px;
+    padding: 0; }
+
+  #new_item h2 {
+    background: url("../images/top/title_newitems.png") no-repeat top center; }
+
+  #popular_item h2 {
+    background: url("../images/top/title_popular.png") no-repeat top center; }
+
+  #shopping_guide h2 {
+    background: url("../images/top/title_guide.png") no-repeat top center; }
+
+  #recent_item h2 {
+    background: url("../images/top/title_recent.png") no-repeat top center; }
+
+  #new_item .flexbox .item_inner, #popular_item .flexbox .item_inner, #recent_item .flexbox .item_inner {
     width: 32.9%;
     background-color: #fff;
-    padding: 2%;
+    padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 0.63%; }
-    main .contents_area #new_item .flexbox .item_inner .post p, main .contents_area #popular_item .flexbox .item_inner .post p, main .contents_area #shopping_guide .flexbox .item_inner .post p, main .contents_area #list_item .flexbox .item_inner .post p, main .contents_area #recent_item .flexbox .item_inner .post p {
+    margin-bottom: 5px; }
+    #new_item .flexbox .item_inner .post p, #popular_item .flexbox .item_inner .post p, #recent_item .flexbox .item_inner .post p {
       font-size: 12px;
       font-size: 1.2rem;
       padding-top: 1.6em;
       margin: 0; }
-      main .contents_area #new_item .flexbox .item_inner .post p span, main .contents_area #popular_item .flexbox .item_inner .post p span, main .contents_area #shopping_guide .flexbox .item_inner .post p span, main .contents_area #list_item .flexbox .item_inner .post p span, main .contents_area #recent_item .flexbox .item_inner .post p span {
+      #new_item .flexbox .item_inner .post p span, #popular_item .flexbox .item_inner .post p span, #recent_item .flexbox .item_inner .post p span {
         display: block;
         padding: 2rem 0 0; }
-  main .contents_area #new_item h2 img {
-    width: 100px; }
-  main .contents_area #popular_item h2 img {
-    width: 138px; }
-  main .contents_area #list-item h2 {
-    margin-bottom: 20px; }
-  main .contents_area #recent_item h2 img {
-    width: 102px; }
-  main .contents_area #shopping_guide h2 img {
-    width: 152px; }
-  main .contents_area #shopping_guide .flexbox .guide_inner {
+
+  #shopping_guide .flexbox .guide_inner {
     width: 49.5%;
-    padding: 4% 3.65%;
+    padding: 25px 20px;
     box-sizing: border-box;
     margin-bottom: 20px; }
-    main .contents_area #shopping_guide .flexbox .guide_inner h3 {
+    #shopping_guide .flexbox .guide_inner h3 {
       font-size: 16px;
       font-size: 1.6rem; }
-    main .contents_area #shopping_guide .flexbox .guide_inner p {
-      width: 175px; }
-    main .contents_area #shopping_guide .flexbox .guide_inner dl {
+    #shopping_guide .flexbox .guide_inner dl {
       margin: 0; }
-      main .contents_area #shopping_guide .flexbox .guide_inner dl dt {
+      #shopping_guide .flexbox .guide_inner dl dt {
         font-size: 12px;
         font-size: 1.2rem;
         font-weight: bold; }
-      main .contents_area #shopping_guide .flexbox .guide_inner dl dd {
+      #shopping_guide .flexbox .guide_inner dl dd {
         color: #000;
         font-size: 12px;
         font-size: 1.2rem;
         margin: 0; }
-      main .contents_area #shopping_guide .flexbox .guide_inner dl dd.credit {
+      #shopping_guide .flexbox .guide_inner dl dd.credit {
         margin: 0;
         box-sizing: border-box; }
-        main .contents_area #shopping_guide .flexbox .guide_inner dl dd.credit img {
-          width: 19%; }
-  main .contents_area .pagenation {
+        #shopping_guide .flexbox .guide_inner dl dd.credit img {
+          width: 58px; } }
+/* ----- contents_area PC ----- */
+/* --------------- contents_area --------------- */
+/* ---- pagenation ---- */
+.pagenation {
+  margin-top: 20px; }
+  .pagenation .next, .pagenation .back {
+    width: 40%;
+    background-color: #887f69; }
+    .pagenation .next a, .pagenation .back a {
+      display: block;
+      padding: 20px 10px;
+      margin: 0;
+      text-align: center; }
+      .pagenation .next a img, .pagenation .back a img {
+        width: 40%; }
+
+@media (min-width: 550px) {
+  .pagenation {
     margin-top: 20px; }
-    main .contents_area .pagenation .next, main .contents_area .pagenation .back {
+    .pagenation .next, .pagenation .back {
       width: 122px; }
-      main .contents_area .pagenation .next a, main .contents_area .pagenation .back a {
+      .pagenation .next a, .pagenation .back a {
         display: block;
         padding: 15px 20px;
         margin: 0;
         text-align: center; }
-        main .contents_area .pagenation .next a img, main .contents_area .pagenation .back a img {
+        .pagenation .next a img, .pagenation .back a img {
           width: 50%; } }
-main .subnavi #search, main .subnavi #link, main .subnavi #category, main .subnavi #about, main .subnavi #info {
+/* ---- pagenation ---- */
+/* ---------------- subnavi ---------------- */
+#search, #link, #category, #about, #info {
   margin-bottom: 15px;
   background-color: #fff;
   font-size: 12px;
   font-size: 1.2rem; }
-  main .subnavi #search h3, main .subnavi #link h3, main .subnavi #category h3, main .subnavi #about h3, main .subnavi #info h3 {
+  #search h3, #link h3, #category h3, #about h3, #info h3 {
     background-color: #887f69;
-    width: 100%;
-    padding: 0 24px 10px;
-    margin: 0;
-    box-sizing: border-box;
-    color: #fff; }
-main .subnavi #about .innerbox, main .subnavi #info .innerbox {
+    font-size: 1rem; }
+
+#about .innerbox, #info .innerbox {
   padding: 2rem;
   margin: 0; }
-  main .subnavi #about .innerbox figure, main .subnavi #info .innerbox figure {
+  #about .innerbox figure, #info .innerbox figure {
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box; }
-    main .subnavi #about .innerbox figure img, main .subnavi #info .innerbox figure img {
+    #about .innerbox figure img, #info .innerbox figure img {
       width: 50%;
       float: left; }
-  main .subnavi #about .innerbox .cap, main .subnavi #info .innerbox .cap {
+  #about .innerbox .cap, #info .innerbox .cap {
     width: 50%;
-    padding-left: 2rem;
+    padding-left: 20px;
     float: left;
     box-sizing: border-box; }
-    main .subnavi #about .innerbox .cap .more_btn, main .subnavi #info .innerbox .cap .more_btn {
+    #about .innerbox .cap .more_btn, #info .innerbox .cap .more_btn {
       width: 80%;
       background-color: #887f69;
       font-size: 14px;
@@ -315,151 +340,176 @@ main .subnavi #about .innerbox, main .subnavi #info .innerbox {
       -moz-border-radius: 2rem;
       -webkit-border-radius: 2rem;
       border-radius: 2rem;
-      margin: 0; }
-      main .subnavi #about .innerbox .cap .more_btn a, main .subnavi #info .innerbox .cap .more_btn a {
+      margin-top: 20px; }
+      #about .innerbox .cap .more_btn a, #info .innerbox .cap .more_btn a {
         display: block;
         text-decoration: none;
         color: #fff;
         text-align: center;
         padding: 5px;
         margin: 0; }
-main .subnavi #about .innerbox:after, main .subnavi #info .innerbox:after {
+#about .innerbox:after, #info .innerbox:after {
   content: "";
   display: block;
   clear: both; }
-main .subnavi #search h3 {
+
+#search h3 {
   display: none; }
-main .subnavi #search .search_window {
+#search .search_window {
   margin: 0;
   padding: 0; }
-  main .subnavi #search .search_window form {
+  #search .search_window form {
     background-color: #eeeeee;
     width: 100%;
     padding: 3%;
     margin: 0;
     box-sizing: border-box; }
-    main .subnavi #search .search_window form input {
+    #search .search_window form input {
       background-color: #eeeeee;
       width: 88%;
       margin: 0;
       padding: 0;
       border: none; }
-    main .subnavi #search .search_window form button {
+    #search .search_window form button {
       width: 10%;
       border: none;
       margin: 0;
       padding: 0; }
-main .subnavi #link h3 {
-  font-size: 16px;
-  font-size: 1.6rem;
+
+#link h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
   letter-spacing: 0.1em;
   font-weight: bold;
-  padding: 15px 20px; }
-main .subnavi #category h3 img {
-  width: 36%; }
-main .subnavi #category .innerbox {
-  padding: 0; }
-  main .subnavi #category .innerbox ul {
+  padding: 20px; }
+  #link h3 div {
+    color: #fff;
+    background: url("../images/top/next_icon.png") no-repeat center right; }
+
+#category h3 {
+  padding: 20px; }
+  #category h3 div {
+    background: url("../images/top/next_icon.png") no-repeat center right; }
+    #category h3 div img {
+      width: 36%; }
+#category .innerbox {
+  padding: 0;
+  margin: 0; }
+  #category .innerbox ul {
     list-style: none;
     font-size: 12px;
     font-size: 1.2rem;
     letter-spacing: 0.1em;
-    margin: 0; }
-    main .subnavi #category .innerbox ul li {
+    margin: 0;
+    padding: 0; }
+    #category .innerbox ul li {
       border-bottom: 4px solid #f9f8f6;
       padding: 1.5em;
       margin: 0; }
-    main .subnavi #category .innerbox ul li:last-child {
+    #category .innerbox ul li:last-child {
       border-bottom: none; }
-main .subnavi #about h3 img {
-  width: 20%; }
-main .subnavi #info h3 img {
-  width: 30%; }
+
+#about h3 {
+  padding: 20px; }
+  #about h3 div {
+    background: url("../images/top/next_icon.png") no-repeat center right; }
+    #about h3 div img {
+      width: 20%; }
+
+#info h3 {
+  padding: 20px; }
+  #info h3 div {
+    background: url("../images/top/next_icon.png") no-repeat center right; }
+    #info h3 div img {
+      width: 30%; }
+
+/* ---- subnavi PC ---- */
 @media (min-width: 550px) {
-  main .subnavi #search, main .subnavi #link, main .subnavi #category, main .subnavi #about, main .subnavi #info {
-    margin-bottom: 20px;
-    background-color: #fff; }
-    main .subnavi #search h3, main .subnavi #link h3, main .subnavi #category h3, main .subnavi #about h3, main .subnavi #info h3 {
-      padding: 0 20px 10px;
-      margin: 0;
-      box-sizing: border-box; }
-  main .subnavi #about .innerbox, main .subnavi #info .innerbox {
+  #search, #link, #category, #about, #info {
+    margin-bottom: 20px; }
+
+  #about .innerbox, #info .innerbox {
     padding: 12px;
     margin: 0; }
-    main .subnavi #about .innerbox figure, main .subnavi #info .innerbox figure {
+    #about .innerbox figure, #info .innerbox figure {
       width: 100%; }
-      main .subnavi #about .innerbox figure img, main .subnavi #info .innerbox figure img {
+      #about .innerbox figure img, #info .innerbox figure img {
         width: 100%;
         float: none; }
-    main .subnavi #about .innerbox .cap, main .subnavi #info .innerbox .cap {
+    #about .innerbox .cap, #info .innerbox .cap {
       width: 100%;
       padding: 0;
-      margin: 10px auto;
+      margin: 0 auto;
       font-size: 12px;
       font-size: 1.2rem;
       float: none; }
-      main .subnavi #about .innerbox .cap .more_btn, main .subnavi #info .innerbox .cap .more_btn {
+      #about .innerbox .cap p, #info .innerbox .cap p {
+        margin-bottom: 10px; }
+      #about .innerbox .cap p.more_btn, #info .innerbox .cap p.more_btn {
         width: 70%;
         font-size: 12px;
         font-size: 1.2rem;
-        margin: 0 auto;
-        padding: 0; }
-  main .subnavi #search {
-    padding: 0 20px 20px; }
-    main .subnavi #search h3 {
+        margin: 0 auto; }
+
+  #search {
+    padding: 20px; }
+    #search h3 {
       display: block;
       background-color: #fff;
-      margin: 0;
-      padding: 0; }
-      main .subnavi #search h3 img {
+      margin-bottom: 10px; }
+      #search h3 img {
         width: 87px;
         margin: 0;
         padding: 0; }
-    main .subnavi #search .search_window {
+    #search .search_window {
       margin: 0 auto;
       padding: 0; }
-      main .subnavi #search .search_window form {
+      #search .search_window form {
         padding: 0 0 0 5px;
         margin: 0; }
-        main .subnavi #search .search_window form input {
+        #search .search_window form input {
           background-color: #eeeeee;
           width: 80%;
           height: 20px;
           border: none;
           margin: 0;
           padding: 0; }
-        main .subnavi #search .search_window form button {
+        #search .search_window form button {
           width: 10%; }
-          main .subnavi #search .search_window form button img {
+          #search .search_window form button img {
             width: 16px;
             height: 16px; }
-  main .subnavi #link h3 {
+
+  #link h3 {
     font-size: 12px;
     font-size: 1.2rem;
     letter-spacing: 0.1em;
-    font-weight: bold;
-    padding-top: 15px; }
-  main .subnavi #category h3 img {
+    font-weight: bold; }
+
+  #category h3 div img {
     width: 85px; }
-  main .subnavi #category .innerbox {
+  #category .innerbox {
     padding: 0; }
-    main .subnavi #category .innerbox ul {
+    #category .innerbox ul {
       list-style: none;
       font-size: 12px;
       font-size: 1.2rem;
       letter-spacing: 0.1em;
       margin: 0; }
-      main .subnavi #category .innerbox ul li {
+      #category .innerbox ul li {
         border-bottom: 2px solid #f9f8f6;
         padding: 1em 1.5em; }
-      main .subnavi #category .innerbox ul li:last-child {
+      #category .innerbox ul li:last-child {
         border-bottom: none; }
-  main .subnavi #about h3 img {
-    width: 45px; }
-  main .subnavi #info h3 img {
-    width: 75px; } }
 
-/* pagetop */
+  #about h3 div img {
+    width: 45px; }
+
+  #info h3 div img {
+    width: 75px; } }
+/* ---- subnavi PC ---- */
+/* ---------------- subnavi ---------------- */
+/* ---------------- pagetop ---------------- */
 .pagetop {
   margin: 40px auto;
   text-align: center; }
@@ -474,7 +524,8 @@ main .subnavi #info h3 img {
         margin: 0;
         padding: 0; } }
 
-/* footer */
+/* ---------------- pagetop ---------------- */
+/* ----------------- footer ---------------- */
 .footer_link {
   border-top: 1px solid #9f9785;
   padding-top: 40px; }
@@ -499,7 +550,37 @@ main .subnavi #info h3 img {
       font-size: 1.2rem;
       display: inline-block; } }
 
-/* product sp only */
+/* ----------------- footer ---------------- */
+/* ----------------- list item ---------------- */
+#list_item h2#list_h2_pc {
+  display: none; }
+#list_item .flexbox .item_inner {
+  width: 49.6%;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 4px; }
+  #list_item .flexbox .item_inner .post p {
+    padding-top: 1.6rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+    margin: 0; }
+    #list_item .flexbox .item_inner .post p span {
+      display: block;
+      padding: 1em 0 0; }
+
+@media (min-width: 550px) {
+  #list_item h2#list_h2_sp {
+    display: none; }
+  #list_item h2#list_h2_pc {
+    display: block; }
+  #list_item .flexbox .item_inner {
+    width: 32.9%;
+    margin-bottom: 5px; }
+    #list_item .flexbox .item_inner .post p span {
+      padding: 2rem 0 0; } }
+/* ----------------- list item ---------------- */
+/* ----------------- product ---------------- */
 @media (max-width: 550px) {
   #product .container {
     width: 100%;
@@ -586,7 +667,8 @@ main .subnavi #info h3 img {
     #product #product_item .spec .cart_area {
       margin-top: 20px; }
       #product #product_item .spec .cart_area .cart_btn {
-        text-align: center; }
+        text-align: center;
+        font-size: 1rem; }
         #product #product_item .spec .cart_area .cart_btn a {
           width: 60%;
           display: block;
@@ -616,24 +698,29 @@ main .subnavi #info h3 img {
         border-radius: 0;
         box-shadow: none; }
   #product #product_item .product_info {
-    /*padding-top:40px;*/ }
+    padding-top: 40px; }
     #product #product_item .product_info h3 {
       font-size: 16px;
       font-size: 1.6rem;
       font-weight: bold;
       padding-bottom: 20px;
+      margin-bottom: 20px;
       border-bottom: 1px solid #887f69;
       color: #887f69; }
     #product #product_item .product_info p.emphasis {
       font-size: 16px;
       font-size: 1.6rem;
       font-weight: bold;
-      color: #887f69; }
+      color: #887f69;
+      margin-bottom: 20px; }
     #product #product_item .product_info p {
       font-size: 14px;
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      margin-bottom: 20px; }
     #product #product_item .product_info table th {
       font-weight: normal; }
+
+/* --------- product PC --------- */
 @media (min-width: 550px) {
   #product #product_item {
     padding: 3% 10% 10%; }
@@ -724,5 +811,7 @@ main .subnavi #info h3 img {
         background-color: #f9f9f5; }
       #product #product_item .spec_table tr td {
         background-color: #fff; } }
+/* --------- product PC --------- */
+/* ----------------- product ---------------- */
 
 /*# sourceMappingURL=test.css.map */
