@@ -102,10 +102,12 @@ header .container {
 @media (min-width: 550px) {
   header .container .logo {
     text-align: left;
-    padding-top: 10px; }
+    padding-top: 10px;
+    margin-bottom: 0; }
   header .container .navi {
     text-align: right;
-    padding-top: 30px; }
+    padding-top: 30px;
+    margin-bottom: 0; }
     header .container .navi .pc_navi {
       list-style: none;
       display: block; }
