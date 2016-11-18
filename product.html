@@ -160,7 +160,7 @@
                             
                             
                             <section id="recent_item">
-                                <h2></h2>
+                                <h2><img src="images/top/title_recent_pc.png" class="js-image-switch u-max-full-width" /></h2>
                                 <div class="flexbox flex-wrap space-between">
                                     <div class="item_inner">
                                         <div class="post">
@@ -184,7 +184,7 @@
                             </section><!-- #recent_item -->
                             
                             <section id="shopping_guide">
-                                <h2></h2>
+                                <h2><img src="images/top/title_guide_pc.png" class="js-image-switch u-max-full-width" /></h2>
                                 <div class="flexbox flex-wrap space-between">
                                     <div class="guide_inner">
                                         <h3>お届けについて</h3>
@@ -305,6 +305,38 @@
                 </div>
             </div>
         </footer><!-- footer -->
+        
+        <script type="text/javascript">
+            $(function() {
+              var $elem = $('.js-image-switch');
+              var sp = '_sp.';
+              var pc = '_pc.';
+              var replaceWidth = 550;
+            
+              function imageSwitch() {
+                var windowWidth = parseInt($(window).width());
+                
+                $elem.each(function() {
+                  var $this = $(this);
+                  if(windowWidth >= replaceWidth) {
+                    $this.attr('src', $this.attr('src').replace(sp, pc));
+                  } else {
+                    $this.attr('src', $this.attr('src').replace(pc, sp));
+                  }
+                });
+              }
+              imageSwitch();
+            
+              // 動的なリサイズは操作後0.2秒経ってから処理を実行する。
+              var resizeTimer;
+              $(window).on('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                  imageSwitch();
+                }, 100);
+              });
+            });
+        </script>
         
         
     </body>
