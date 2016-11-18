@@ -207,33 +207,32 @@ header {
 #new_item,#popular_item,#shopping_guide,#recent_item{
     h2{
         width:100%;
-        height:30px;
-        margin:40px 0 10px;
+        height:60px;
         padding:0;
     }
 }
 #new_item{
     h2{
-        background:url("../images/top/title_newitems_sp.png") no-repeat top center;
-        background-size:35% auto;
+        width:35%;
+        margin:20px auto 0;
     }
 }
 #popular_item{
     h2{
-        background:url("../images/top/title_popular_sp.png") no-repeat top center;
-        background-size:50% auto;
+        width:50%;
+        margin:30px auto 0;
     }
 }
 #shopping_guide{
    h2{
-        background:url("../images/top/title_guide_sp.png") no-repeat top center;
-        background-size:55% auto;
+        width:55%;
+        margin:30px auto 0;
     } 
 }
 #recent_item{
     h2{
-        background:url("../images/top/title_recent_sp.png") no-repeat top center;
-        background-size:32% auto;
+        width:32%;
+        margin:30px auto 0;
     }
 }
 #new_item,#popular_item,#shopping_guide,#recent_item{
@@ -315,29 +314,28 @@ header {
 #new_item,#popular_item,#recent_item,#shopping_guide{
     h2{
         width:100%;
-        height:30px;
-        margin:30px 0 10px;
+        height:60px;
         padding:0;
     }
 }
 #new_item{
     h2{
-        background:url("../images/top/title_newitems.png") no-repeat top center;
+        margin:0 auto;
     }
 }
 #popular_item{
     h2{
-        background:url("../images/top/title_popular.png") no-repeat top center;
+        margin:20px auto 0;
     }
 }
 #shopping_guide{
    h2{
-        background:url("../images/top/title_guide.png") no-repeat top center;
+        margin:20px auto 0;
     } 
 }
 #recent_item{
     h2{
-        background:url("../images/top/title_recent.png") no-repeat top center;
+        margin:20px auto 0;
     }
 }
 #new_item,#popular_item,#recent_item{
